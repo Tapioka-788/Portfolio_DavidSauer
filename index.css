@@ -1,40 +1,26 @@
-.cabeçalho-titulo {
-    font-size: 30px;
-    color:#000000;
-    text-align: center;
-    border: 2px solid black;
-    padding: 10px;
-    margin:20px;
+#levrone {
+    width: 30%;
+    padding-left: 35%;
 }
 
-h1 {
-    margin-top: 50px; 
-    margin-bottom: 30px; 
-    margin-left: 20px; 
-    margin-right: 20px; 
-}
-
-
-.butoes {
-    text-align: center;
-}
-.btn {
-    display: inline-block;
-    margin: 5px;
-    padding: 10px 20px;
-    background-color: #04274d;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.levrone{
-    width: auto;
-}
-
-.p {
+.seila {
     font-size: 40px;
     font-weight: bold;
     text-align: center;
+}
+
+footer {
+    background-color: rgb(219, 196, 196);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size:16px;
+}
+
+.cabecalho-titulo {
+    text-align: center;
+}
+
+.butoes {
+    align-items: center;
 }
