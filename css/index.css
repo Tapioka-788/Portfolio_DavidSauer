@@ -1,6 +1,38 @@
 @import url(./reset.css);
 @import url(./header.css);
 
+
+
+@media (max-width:480px){
+    body {
+        width: 100vw;
+        height: 15vw;
+    }
+    img {
+        width: 100vw;
+        height: 100vw;
+    }
+
+    #levrone {    
+    width: 0vw;
+    height: 0vw;
+    margin-left: 20w;
+    margin-top: 5vw;
+    position: absolute;
+    }
+    
+.cabecalho-titulo {
+    position:relative;
+    margin-left:50vw;
+    margin-top:20vw;
+    font-size: 100px;
+}
+
+
+}
+
+
+
 body {
     width: 100vw;
     height: 15hw;
