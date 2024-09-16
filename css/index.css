@@ -1,43 +1,44 @@
 @import url(./reset.css);
 @import url(./header.css);
+@import url(./footer.css);
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 
 
-
-@media (max-width:480px){
+@media (max-width:480px) {
     body {
         width: 100vw;
         height: 15vw;
     }
+
     img {
         width: 100vw;
         height: 100vw;
     }
 
-    #levrone {    
-    width: 0vw;
-    height: 0vw;
-    margin-left: 20w;
-    margin-top: 5vw;
-    position: absolute;
+    #levrone {
+        width: 0vw;
+        height: 0vw;
+        margin-left: 20w;
+        margin-top: 5vw;
+        position: absolute;
     }
-    
-.cabecalho-titulo {
-    position:relative;
-    margin-left:50vw;
-    margin-top:20vw;
-    font-size: 100px;
-}
+
+    .cabecalho-titulo {
+        position: relative;
+        margin-left: 50vw;
+        margin-top: 20vw;
+        font-size: 100px;
+    }
 
 
 }
-
-
 
 body {
     width: 100vw;
     height: 15hw;
-    background-color: rgb(43, 11, 53);
-    color:#ffffff
+    background-color: rgb(250, 250, 250);
+    color: #000000;
+    font-family: "Cinzel", serif;
 }
 
 img {
@@ -45,7 +46,7 @@ img {
     height: 100%;
 }
 
-#levrone {
+#valknut {
     width: 25vw;
     height: 25vw;
     margin-left: 20vw;
@@ -54,9 +55,9 @@ img {
 }
 
 .cabecalho-titulo {
-    position:absolute;
-    margin-left:50vw;
-    margin-top:20vw;
+    position: absolute;
+    margin-left: 50vw;
+    margin-top: 18vw;
     font-size: 100px;
 }
 
@@ -65,25 +66,16 @@ img {
     font-weight: bold;
     text-align: center;
     position: absolute;
-    margin-left: 50vw;
-    margin-top: 25vw;
-    ;
+    margin-left: 51vw;
+    margin-top: 23vw;
 }
-
-
-
 
 .butoes {
     align-items: center;
 }
 
-footer {
-    background-color: rgb(0, 0, 0);
-    text-align: center;
-    font-size: 16px;
-    position:absolute;
-    bottom:0;
-    width:100vw;
-    padding: 10px 10px;
-    color:#ffffff
+.musica {
+    position: absolute;
+    left: 70px;
+    top:700px
 }
