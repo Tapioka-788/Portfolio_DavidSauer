@@ -5,7 +5,7 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background-color: rgb(83, 83, 83);
+    background-color: rgb(20, 50, 88);
 }
 
 @media (max-width:480px){
@@ -34,6 +34,12 @@ header {
 #logo-imagem {
     height:100%;
     margin: 0 5vw;  
+    transition: transform 1s ease-in-out
+}
+
+#logo-imagem:hover {
+    transform: rotate(360deg);
+    
 }
 
 #aluno {
@@ -51,6 +57,14 @@ header {
     border-radius: 25px; /* Arredonda os cantos */
     font-size: 16px; /* Tamanho da fonte */
     cursor: pointer; /* Cursor de mão ao passar o mouse */
-    transition: all 0.3s; /* Transição suave para a cor de fundo */
+    transition: all 0.3s ease-in-out; /* Transição suave para a cor de fundo */
     font-family: "Cinzel", serif;
+
 }
+
+.btn:hover {
+    width:11vw;
+    height:6vh;
+    color: #4db8f7
+}
+
