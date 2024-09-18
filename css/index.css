@@ -38,7 +38,7 @@ body {
     height: 15hw;
     color: #000000;
     font-family: "Cinzel", serif;
-    background-image: url(../.vscode/assets/img/backgroundoceano.jpg);
+    background-image: url(./../assets/img/backgroundoceano.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     margin:0;
