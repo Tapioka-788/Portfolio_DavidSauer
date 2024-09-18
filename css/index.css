@@ -94,6 +94,14 @@ img {
     top:700px
 }
 
+
+#github {
+    border-radius: 100px;
+    flex-direction: row;
+
+} 
+
+
 @keyframes moveAcrossScreen {
     0% {
         transform: translateX(-100%); /* Start from the left side, outside of the viewport */
