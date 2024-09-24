@@ -10,7 +10,7 @@ body {
     height: 15hw;
     color: #000000;
     font-family: "Cinzel", serif;
-    background-image: url(./../assets/img/backgroundoceano.jpg);
+    background-image: url(./../../assets/img/backgroundoceano.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     margin:0;
@@ -133,12 +133,11 @@ img {
         width: 10vw;
         height: 5vh;
     }
+
     #github i {
         font-size: 6vw;
      }
     
-
-
 
     .btn h6 {
         display: none;
