@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,13 +9,13 @@
     <script src="https://kit.fontawesome.com/10b1b3eb1e.js" crossorigin="anonymous"></script>
     <script type="module" src="./../../controller/projetos/projetos.js"></script>
 </head>
+
 <body>
 
     <header>
 
         <div id="logo">
-            <img id="logo-imagem"
-                src="./../../assets/img/naveship.jpg">
+            <img id="logo-imagem" src="./../../assets/img/naveship.jpg">
             <p id="aluno">Aluno WEBBES</p>
         </div>
         <div class="butoes">
@@ -33,23 +34,36 @@
         </div>
     </header>
 
-     <nav id="banners">
-        <div class="banner" style="background-color: blue;"> </div>
+    <nav id="banners">
+        <div class="banner"> </div>
         <div class="banner" style="background-color: rgb(255, 255, 255);"> </div>
         <div class="banner"> </div>
         <div class="banner"> </div>
-     </nav>
+    </nav>
 
-     <nav id="btns_banners">
+    <nav id="btns_banners">
         <button class="btn_banner" onclick="trocarBanner(0)"></button>
         <button class="btn_banner" onclick="trocarBanner(1)"></button>
         <button class="btn_banner" onclick="trocarBanner(2)"></button>
         <button class="btn_banner" onclick="trocarBanner(3)"></button>
-     </nav>
+    </nav>
+
+    <section>
+        <nav id="icon_menu" onclick="trocarMenu()">
+            <div id="barra1"></div>
+            <div id="barra2"></div>
+            <div id="barra3"></div>
+        </nav>
+        <nav id="menu">
+
+        </nav>
+
+    </section>
 
 
 
 
-    
+
 </body>
+
 </html>
