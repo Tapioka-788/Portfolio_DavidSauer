@@ -2,3 +2,21 @@
 @import url(./banners.css);
 @import url(./../index.css);
 @import url(./../footer.css);
+
+
+
+#cartoes {
+    display: grid;
+    grid-template-columns:20vw 20vw 20vw 20vw;
+}
+
+.cartao{
+    width: 15vw;
+    height: 25vh;
+    margin:1vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
