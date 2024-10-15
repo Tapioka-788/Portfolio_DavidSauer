@@ -4,22 +4,22 @@ export async function criarCartoes() {
     try {
         const response = await fetch('http://localhost:3000/cartoes');
         const data = await response.json();
-        const cartoes = await data.cartoes;
+        const cartoes = data.cartoes;
 
-        for (let i = 0; i < cartoes.lenght; i++) {
+        for (let i = 0; i < cartoes.length; i++) {
 
             let cartao = document.createElement('div');
             cartao.className = 'cartao';
 
             let h1 = document.createElement('h1');
-            h1.textContent = c.nome;
+            h1.textContent = cartoes.nome;
 
             let h3 = document.createElement('h3');
-            h3.textContent = c.valor;
+            h3.textContent = cartoes.valor;
 
             let img = document.createElement('img');
-            img.src = c.imagem; // Define a fonte da imagem
-            img.alt = c.nome;   // Texto alternativo para a imagem
+            img.src = cartoes.imagem; // Define a fonte da imagem
+            img.alt = cartoes.nome;   // Texto alternativo para a imagem
             img.className = 'imagem'; // Adicione uma classe para estilização, se necessário
 
             let p = document.createElement('p');
