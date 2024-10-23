@@ -1,15 +1,16 @@
+
 import { criarCartoes } from "./cartoes.js";
-import { escondetelaAtt } from "./telaatt.js";
-import { recolheDadosAtt } from "./telacad.js"; 
-import { escondetelaCad} from "./telacad.js";
-import { recolheDadosAtt } from "../../services/telaatt.js";
+import { escondeTelaCad } from "./../../services/telacad.js";
+import { recolheDados } from "./../../services/telacad.js";
+import { escondeTelaAtt } from "./../../services/telaatt.js";
+import { recolheDadosAtt } from "./../../services/telaatt.js";
 
-window.escondetelaAtt = escondetelaAtt;
+window.escondeTelaCad = escondeTelaCad;
+window.recolheDados = recolheDados;
+window.escondeTelaAtt = escondeTelaAtt;
 window.recolheDadosAtt = recolheDadosAtt;
-window.escondetelaCad = escondetelaCad;
-window.recolhedadosCad = recolhedadosCad;
 
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", function(){
     criarCartoes();
 });
