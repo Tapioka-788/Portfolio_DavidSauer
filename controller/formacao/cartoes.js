@@ -25,42 +25,42 @@ export async function criarCartoes() {
             img.alt = cartoes.nome;   // Texto alternativo para a imagem
             img.className = 'imagem'; // Adicione uma classe para estilização, se necessário
 
-            // let buttonContainer = document.createElement('div');
-            // buttonContainer.style.display = 'flex';
-            // buttonContainer.style.justifyContent = 'space-between';
-            // buttonContainer.style.gap = '10px';
+            let buttonContainer = document.createElement('div');
+            buttonContainer.style.display = 'flex';
+            buttonContainer.style.justifyContent = 'space-between';
+            buttonContainer.style.gap = '10px';
 
-            // let button = document.createElement ('button');
-            // button.className = 'btn_card';
-            // button.textContent = 'EXCLUIR';
-            // button.addEventListener('click', () => {
-            //     excluirCartoes(i);
-            // });   
+            let button = document.createElement ('button');
+            button.className = 'btn_card';
+            button.textContent = 'EXCLUIR';
+            button.addEventListener('click', () => {
+                excluirCartoes(i);
+            });   
             
-            // let buttonAtt = document.createElement('button');
-            // buttonAtt.className = 'btn_att_card';
-            // buttonAtt.textContent = 'ATUALIZAR';
-            // buttonAtt.addEventListener('click', () => {
-            //     mostraTelaAtt(i);
-            // });
+            let buttonAtt = document.createElement('button');
+            buttonAtt.className = 'btn_att_card';
+            buttonAtt.textContent = 'ATUALIZAR';
+            buttonAtt.addEventListener('click', () => {
+                mostraTelaAtt(i);
+            });
 
-            // buttonContainer.appendChild(button);
-            // buttonAtt.appendChild(buttonAtt);
-            // cartao.appendChild(img); // Adiciona a imagem ao cartão
-            // cartao.appendChild(h1);
-            // cartao.appendChild(h3);
-            // cartao.appendChild(buttonContainer)
+            buttonContainer.appendChild(button);
+            buttonAtt.appendChild(buttonAtt);
+            cartao.appendChild(img); // Adiciona a imagem ao cartão
+            cartao.appendChild(h1);
+            cartao.appendChild(h3);
+            cartao.appendChild(buttonContainer);
 
             sectionCartoes.appendChild(cartao); // Adiciona o cartão à seção
         };
 
-        // let criarCartoes = document.createElement('button');
-        // criarCartoes.className = "btn_add_card";
-        // criarCartoes.textContent = '+';
-        // criarCartoes.addEventListener('click', () => {
-        // });
+        let criarCartoes = document.createElement('button');
+        criarCartoes.className = "btn_add_card";
+        criarCartoes.textContent = '+';
+        criarCartoes.addEventListener('click', () => {
+        });
 
-        // sectionCartoes.appendChild(criarCartoes);
+        sectionCartoes.appendChild(criarCartoes);
 
     } catch (e) {
         alert(e);
