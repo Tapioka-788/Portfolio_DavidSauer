@@ -1,9 +1,11 @@
 import { cadastrarCartoes } from "./servicoscartoes.js";
 
 let telaCad = document.getElementById('telaCadastro');
+
 export function escondeTelaCad() {
     telaCad.style.left = '-100vw';
 }
+
 export function mostraTelaCad() {
     telaCad.style.left = '0';
 }
@@ -18,6 +20,10 @@ export function recolheDados() {
 
     resetInputs(nome);
     resetInputs(descricao);
-    resetInputs(imagem)
+    resetInputs(imagem);
+}
 
+// Função para limpar os campos de entrada
+function resetInputs(input) {
+    input.value = '';
 }

@@ -5,16 +5,14 @@ export async function buscarCartoes() {
         const response = await fetch('http://localhost:3000/cartoes');
         if (response.status === 200) {
             const data = await response.json();
-            const cartoes = data.cartoes;
-            return cartoes;
+            return data.cartoes;
         } else {
             alert('Erro ao carregar cartões');
-            const cartoes = [];
-            return cartoes;
+            return [];
         }
-    }
-    catch (e) {
+    } catch (e) {
         console.log('Erro ao se comunicar com o Server: ' + e);
+        return [];
     }
 }
 
@@ -28,14 +26,13 @@ export async function excluirCartoes(index) {
             body: JSON.stringify({ cartao: index }),
         });
 
-        if(response.status === 201){
+        if (response.status === 200) {
             criarCartoes();
-        }else{
-            const data = response.json();
+        } else {
+            const data = await response.json();
             alert(data.mensagem);
         }      
-    }
-    catch (e) {
+    } catch (e) {
         console.log('Erro ao se comunicar com o Server: ' + e);
     }
 }
@@ -48,20 +45,19 @@ export async function cadastrarCartoes(nome, descricao, imagem) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                nome: nome,
-                descricao: descricao,
-                imagem: imagem,
+                nome,
+                descricao,
+                imagem,
             }),
         });
         
-        if(response.status === 201){
+        if (response.status === 201) {
             criarCartoes();
-        }else{
-            const data = response.json();
+        } else {
+            const data = await response.json();
             alert(data.mensagem);
         }
-    }
-    catch (e) {
+    } catch (e) {
         console.log('Erro ao se comunicar com o Server: ' + e);
     }
 }
@@ -74,15 +70,16 @@ export async function atualizarCartoes(nome, descricao, imagem) {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                nome: nome,
-                descricao: descricao,
-                imagem: imagem,
+                nome,
+                descricao,
+                imagem,
             }),
         });
-        if(response.status === 201){
+
+        if (response.status === 200) {
             criarCartoes();
-        }else{
-            const data = response.json();
+        } else {
+            const data = await response.json();
             alert(data.mensagem);
         }
     } catch (e) {
