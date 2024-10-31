@@ -1,9 +1,10 @@
 @import url(./../header.css);
 @import url(./../index.css);
 @import url(./../footer.css);
+@import url(./cartoes.css);
 
 
-
+/* 
 #cartoes {
     display: grid;
     grid-template-columns:20vw 20vw 20vw 20vw;
@@ -31,4 +32,4 @@
 .imagem {
     width:10vw;
     height:10vh;
-}
+} */

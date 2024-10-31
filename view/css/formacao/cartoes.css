@@ -1,0 +1,64 @@
+@import url(./cadastro.css); /* Ajuste o caminho se necessário */
+@import url(./atualização.css);
+
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cartões quebrem para a linha seguinte */
+  justify-content: center; /* Centraliza os cartões */
+  padding: 1vw;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  overflow: hidden; /* Não queremos rolagem horizontal */
+}
+
+#cartoes {
+  margin-top: 2vh;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 colunas iguais */
+  gap: 1vw; /* Espaço entre os cartões */
+}
+
+/* Estilização dos cartões */
+.card {
+  width:15vw; 
+  height: 28vh;;
+  background-color: #0b2877;
+  padding: 2vw; /* Aumenta o padding para melhor aparência */
+  border-radius: 10px; /* Arredondamento mais suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra mais forte */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+  color: #ffffff;
+  font-size: 1.2em; /* Aumenta o tamanho da fonte */
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Aumenta levemente o cartão ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra mais forte ao hover */
+}
+
+.button_card {
+  background-color: #1B2540; /* Cor de fundo verde */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  padding: 10px 20px; /* Espaçamento interno */
+  font-size: 1em; /* Tamanho da fonte */
+  cursor: pointer; /* Mão ao passar o mouse */
+  border-radius: 5px; /* Bordas arredondadas */
+  transition: background-color 0.3s, transform 0.2s; /* Transições suaves */
+  margin: 5px; /* Margem entre botões */
+}
+
+/* Efeito hover para o botão */
+.button_card:hover {
+  background-color: #141A34;; /* Cor de fundo mais escura no hover */
+  transform: translateY(-2px); /* Levanta o botão ao passar o mouse */
+}
+
+/* Efeito de clique */
+.button_card:active {
+  transform: translateY(0); /* Retorna ao normal ao clicar */
+}

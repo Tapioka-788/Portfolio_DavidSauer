@@ -2,7 +2,7 @@ import { criarCartoes } from "./../controller/formacao/cartoes.js";
 
 export async function buscarCartoes() {
     try {
-        const response = await fetch('http://localhost:3000/cartoes');
+        const response = await fetch('https://backend-portifolio-psi.vercel.app/cartoes');
         if (response.status === 200) {
             const data = await response.json();
             return data.cartoes;
@@ -18,11 +18,9 @@ export async function buscarCartoes() {
 
 export async function excluirCartoes(index) {
     try {
-        const response = await fetch('http://localhost:3000/cartoes', {
+        const response = await fetch('https://backend-portifolio-psi.vercel.app/cartoes', {
             method: 'DELETE',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ cartao: index }),
         });
 
@@ -31,24 +29,18 @@ export async function excluirCartoes(index) {
         } else {
             const data = await response.json();
             alert(data.mensagem);
-        }      
+        }
     } catch (e) {
         console.log('Erro ao se comunicar com o Server: ' + e);
     }
 }
 
-export async function cadastrarCartoes(nome, descricao, imagem) {
+export async function cadastrarCartoes(nome, descricao, ) {
     try {
-        const response = await fetch('http://localhost:3000/cartoes', {
+        const response = await fetch('https://backend-portifolio-psi.vercel.app/cartoes', {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                nome,
-                descricao,
-                imagem,
-            }),
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nome, descricao,  }),
         });
         
         if (response.status === 201) {
@@ -62,18 +54,12 @@ export async function cadastrarCartoes(nome, descricao, imagem) {
     }
 }
 
-export async function atualizarCartoes(nome, descricao, imagem) {
+export async function atualizarCartoes(id, nome, descricao, ) {
     try {
-        const response = await fetch('http://localhost:3000/cartoes', {
+        const response = await fetch(`https://backend-portifolio-psi.vercel.app/cartoes/${id}`, {
             method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                nome,
-                descricao,
-                imagem,
-            }),
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ nome, descricao,  }),
         });
 
         if (response.status === 200) {

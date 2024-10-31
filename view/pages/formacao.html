@@ -33,5 +33,30 @@
             </button>
         </div>
     </header>
-    <section id="cartoes"></section>
+
+
+
+    <section id="cartoes" class="container"></section>
+
+    <section id="telaCad">
+        <div id="inputs-cadastro">
+            <input type="text" id="input-nome" placeholder="Nome" required>
+            <input type="text" id="input-valor" placeholder="Valor" required>
+            <div id="buttons-tela-cadastro">
+                <button onclick="recolheDados()">SALVAR</button>
+                <button onclick="escondeTelaCad()">CANCELAR</button>
+            </div>
+        </div>
+    </section>
+    <section id="telaAtt">
+        <div id="inputs-att">
+            <input id="nomeAtt" type="text" placeholder="Nome" required>
+            <input id="valorAtt" type="text" placeholder="Valor" required>
+            <div id="buttons-tela-att">
+                <button onclick="recolheDadosAtt()">SALVAR</button>
+                <button onclick="escondeTelaAtt()">CANCELAR</button>
+            </div>
+        </div>
+    </section>
+
 </body>

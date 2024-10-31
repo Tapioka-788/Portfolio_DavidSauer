@@ -1,69 +1,72 @@
-import { excluirCartoes } from "../../services/servicoscartoes.js";
+// Importações das funções necessárias
+import { excluirCartoes, buscarCartoes } from "../../services/servicoscartoes.js";
 import { mostraTelaAtt } from "../../services/telaatt.js";
+import { mostraTelaCad } from "../../services/telacad.js";
+
+
+let section = document.getElementById('cartoes'); // Certifique-se de que o ID é 'cartoes'
 
 export async function criarCartoes() {
-    let sectionCartoes = document.getElementById('cartoes');
-    sectionCartoes.innerHTML = ''; // Limpa a seção antes de adicionar novos cartões
 
-    try {
-        const response = await fetch('http://localhost:3000/cartoes');
-        const data = await response.json();
-        const cartoes = data.cartoes;
+    section.innerHTML = ''; // Limpa o conteúdo atual da seção
 
-        for (let i = 0; i < cartoes.length; i++) {s
-            let cartao = document.createElement('div');
-            cartao.className = 'cartao';
+    const cards = await buscarCartoes(); // Aqui foi feita a chamada correta para buscar os cartões
 
-            let h1 = document.createElement('h1');
-            h1.textContent = cartoes[i].nome;  // Corrigido o acesso ao nome
+    for (let i = 0; i < cards.length; i++) {
+        let card = document.createElement('div');
+        card.className = 'card';
 
-            let h3 = document.createElement('h3');
-            h3.textContent = cartoes[i].descricao;  // Corrigido o acesso à descrição
+        let h3 = document.createElement('h3');
+        h3.textContent = cards[i].mensagem;
 
-            let img = document.createElement('img');
-            img.src = cartoes[i].imagem; // Define a fonte da imagem
-            img.alt = cartoes[i].nome;   // Texto alternativo para a imagem
-            img.className = 'imagem';
+        
 
-            let buttonContainer = document.createElement('div');
-            buttonContainer.style.display = 'flex';
-            buttonContainer.style.justifyContent = 'space-between';
-            buttonContainer.style.gap = '10px';
+        let buttonContainer = document.createElement('div');
+        buttonContainer.style.display = 'flex';
+        buttonContainer.style.justifyContent = 'space-between';
+        buttonContainer.style.gap = '10px';
 
-            let button = document.createElement('button');
-            button.className = 'btn_card';
-            button.textContent = 'EXCLUIR';
-            button.addEventListener('click', () => {
-                excluirCartoes(i);
-            });   
-            
-            let buttonAtt = document.createElement('button');
-            buttonAtt.className = 'btn_att_card';
-            buttonAtt.textContent = 'ATUALIZAR';
-            buttonAtt.addEventListener('click', () => {
-                mostraTelaAtt(i);
-            });
-
-            buttonContainer.appendChild(button);
-            buttonContainer.appendChild(buttonAtt);  // Corrigido para adicionar o botão de atualização
-            cartao.appendChild(img);
-            cartao.appendChild(h1);
-            cartao.appendChild(h3);
-            cartao.appendChild(buttonContainer);
-
-            sectionCartoes.appendChild(cartao);  // Adiciona o cartão à seção
-        }
-
-        let criarCartoesBtn = document.createElement('button');
-        criarCartoesBtn.className = "btn_add_card";
-        criarCartoesBtn.textContent = '+';
-        criarCartoesBtn.addEventListener('click', () => {
-            // Evento para o botão de adicionar cartões
+        // Botão para excluir
+        let button = document.createElement('button');
+        button.className = 'btn_card';
+        button.textContent = 'EXCLUIR';
+        button.style.display = 'flex';
+        button.style.alignItems = 'center';
+        button.style.width = '5vw';
+        button.addEventListener('click', () => {
+            excluirCartoes(i);
         });
 
-        sectionCartoes.appendChild(criarCartoesBtn);
+        // Botão para atualizar
+        let buttonAtt = document.createElement('button');
+        buttonAtt.className = 'btn_att_card';
+        buttonAtt.textContent = 'ATUALIZAR';
+        buttonAtt.style.display = 'flex';
+        buttonAtt.style.alignItems = 'center';
+        buttonAtt.style.width = '5vw';
+        buttonAtt.addEventListener('click', () => {
+            mostraTelaAtt(i);
+        });
 
-    } catch (e) {
-        alert(e);
+        // Adiciona botões ao container de botões
+        buttonContainer.appendChild(button);
+        buttonContainer.appendChild(buttonAtt);
+
+        // Adiciona elementos ao cartão
+        card.appendChild(h3);
+        card.appendChild(buttonContainer);
+
+        // Adiciona o cartão à seção
+        section.appendChild(card);
     }
+
+    // Botão de adicionar novo cartão
+    let cardAdd = document.createElement('button');
+    cardAdd.className = 'btn_add_card';
+    cardAdd.textContent = '+';
+    cardAdd.addEventListener('click', () => {
+        mostraTelaCad();
+    });
+
+    section.appendChild(cardAdd);
 }

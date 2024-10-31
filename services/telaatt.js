@@ -1,16 +1,15 @@
 import { atualizarCartoes } from "./servicoscartoes.js";
 
 let id;
-
-let telaCad = document.getElementById('telaAtt');
+let telaAtt = document.getElementById('telaAtt');
 
 export function escondeTelaAtt() {
-    telaCad.style.right = '-100vw';
+    telaAtt.style.right = '-100vw';
 }
 
 export function mostraTelaAtt(i) {
     id = i;
-    telaCad.style.right = '0';
+    telaAtt.style.right = '0';
 }
 
 export function recolheDadosAtt() {
