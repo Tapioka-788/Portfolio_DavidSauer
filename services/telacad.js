@@ -15,8 +15,7 @@ export function recolheDados() {
     let descricao = document.getElementById('descricao');
 
     if (nome.value === '' || descricao.value === '') {
-
-
+        alert('Por favor, preencha todos os campos.');
     } else {
         cadastrarCartoes(nome.value, descricao.value);
         escondeTelaCad();

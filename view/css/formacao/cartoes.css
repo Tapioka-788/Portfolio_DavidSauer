@@ -45,7 +45,7 @@
   color: white; /* Cor do texto */
   border: none; /* Sem borda */
   padding: 10px 20px; /* Espaçamento interno */
-  font-size: 1em; /* Tamanho da fonte */
+  font-size: 1000px;
   cursor: pointer; /* Mão ao passar o mouse */
   border-radius: 5px; /* Bordas arredondadas */
   transition: background-color 0.3s, transform 0.2s; /* Transições suaves */

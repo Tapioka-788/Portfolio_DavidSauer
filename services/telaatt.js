@@ -15,15 +15,18 @@ export function mostraTelaAtt(i) {
 export function recolheDadosAtt() {
     let nomes = document.getElementById('nomesAtt');
     let descricao = document.getElementById('descricaoAtt');
-    let imagem = document.getElementById('imagemAtt');
 
-    atualizarCartoes(id, nomes.value, descricao.value, imagem.value);
-    escondeTelaAtt();
+    if (nomes.value && descricao.value) {
+        atualizarCartoes(id, nomes.value, descricao.value);
+        escondeTelaAtt();
 
-    resetInputs(nomes);
-    resetInputs(descricao);
-    resetInputs(imagem);
+        resetInputs(nomes);
+        resetInputs(descricao);
+    } else {
+        alert('Por favor, preencha todos os campos.');
+    }
 }
+
 
 // Função para limpar os campos de entrada
 function resetInputs(input) {
