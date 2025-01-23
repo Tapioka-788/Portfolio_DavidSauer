@@ -37,7 +37,7 @@
     border-radius: 5px;
   }
  
-  /* Estilos dos botões do modal de cadastro */
+  
   #buttons-tela-cadastro {
     width: 100%;
     display: flex;
@@ -45,7 +45,7 @@
   }
  
   #buttons-tela-cadastro button {
-    background-color: #1B2540;
+    background-color: #1c2742;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -58,3 +58,15 @@
   #buttons-tela-cadastro button:hover {
     background-color: #141A34;
   }
+
+  .contador {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .contador-limite {
+    color: #DC3545; 
+  }
+
+  

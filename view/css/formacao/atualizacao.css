@@ -4,13 +4,23 @@
     height: 100vh;
     position: fixed;
     top: 0;
-    right: -100vw; /* Oculto inicialmente, aparece pela direita */
+    left: -200vw;  
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semitransparente */
-    z-index: 1000; /* Coloca o modal acima de outros elementos */
-    transition: right 0.3s ease-in-out; /* Transição suave ao aparecer */
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 1000; 
+    transition: left 0.3s ease-in-out; 
+}
+
+/* Classe para mostrar o modal */
+.modal-show {
+    left: 0;  
+}
+
+/* Classe para esconder o modal */
+.modal-hide {
+    left: -100vw;  
 }
 
 /* Container dos inputs do modal de atualização */
@@ -57,7 +67,7 @@
     transition: background-color 0.3s;
 }
 
-/* Efeito hover para os botões */
+
 #buttons_telaatt button:hover {
     background-color: #141A34;
 }

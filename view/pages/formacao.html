@@ -41,14 +41,19 @@
 
     <section id="telaCad">
         <div id="inputs-cadastro">
-            <input type="text" id="nome" placeholder="Nome" required>
-            <input type="text" id="descricao" placeholder="Descrição" required>
+            <input type="text" id="nome" placeholder="Nome" maxlength="50" required>
+            <p id="contador-nome" class="contador">0/50</p> <!-- Contador para o nome -->
+    
+            <input type="text" id="descricao" placeholder="Descrição" maxlength="100" required>
+            <p id="contador-descricao" class="contador">0/100</p> <!-- Contador para a descrição -->
+    
             <div id="buttons-tela-cadastro">
                 <button onclick="recolheDados()">SALVAR</button>
                 <button onclick="escondeTelaCad()">CANCELAR</button>
             </div>
         </div>
     </section>
+
     <section id="telaAtt">
         <div id="inputs-att">
             <input id="nomesAtt" type="text" placeholder="Nome" required>

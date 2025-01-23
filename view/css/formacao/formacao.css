@@ -3,33 +3,3 @@
 @import url(./../footer.css);
 @import url(./cartoes.css);
 
-
-/* 
-#cartoes {
-    display: grid;
-    grid-template-columns:20vw 20vw 20vw 20vw;
-    margin-left: 10vw;;
-}
-
-.cartao{
-    width: 15vw;
-    height: 25vh;
-    margin:1vw;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(255, 255, 255);
-    border-radius: 1vw;
-    transition: all 0.3s ease-in-out;
-}
-
-.cartao:hover {
-    width:15.4vw;
-    height:25.4vh;
-}
-
-.imagem {
-    width:10vw;
-    height:10vh;
-} */

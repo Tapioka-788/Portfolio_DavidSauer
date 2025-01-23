@@ -35,12 +35,12 @@ export async function excluirCartoes(index) {
     }
 }
 
-export async function cadastrarCartoes(nome, descricao, ) {
+export async function cadastrarCartoes(nome, descricao) {
     try {
         const response = await fetch('https://backend-portifolio-psi.vercel.app/cartoes', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ nome, descricao,  }),
+            body: JSON.stringify({ nome, descricao }),
         });
         
         if (response.status === 201) {
@@ -54,14 +54,16 @@ export async function cadastrarCartoes(nome, descricao, ) {
     }
 }
 
-export async function atualizarCartoes(id, nome, descricao, ) {
+export async function atualizarCartoes(id, nome, descricao) {
     try {
         const response = await fetch(`https://backend-portifolio-psi.vercel.app/cartoes/${id}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ nome, descricao,  }),
+            body: JSON.stringify({ nome, descricao }),
         });
 
+        console.log('Status da resposta:', response.status); // Verifique o status
+        
         if (response.status === 200) {
             criarCartoes();
         } else {
