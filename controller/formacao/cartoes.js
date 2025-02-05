@@ -1,7 +1,9 @@
 // Importações das funções necessárias
-import { excluirCartoes, buscarCartoes } from "../../services/servicoscartoes.js";
+import { buscarCartoes } from "./../../services/servicoscartoes.js"
+
 import { mostraTelaAtt } from "../../services/telaatt.js";
 import { mostraTelaCad } from "../../services/telacad.js";
+import { mostraTelaDel } from "../../services/exlcuirCartao.js";
 
 let section = document.getElementById('cartoes'); 
 
@@ -15,26 +17,34 @@ export async function criarCartoes() {
         card.className = 'card';
 
         let h3 = document.createElement('h3');
-        h3.textContent = cards[i].mensagem;
+        h3.textContent = cards[i].nome;
+        h3.id = 'titulo'
+
+        let p = document.createElement('p');
+        p.textContent = cards[i].descricao;
+        p.id = 'paragrafo'
+
+        let infos = document.createElement('div')
+        infos.className = 'boxInfos'
 
         let buttonContainer = document.createElement('div');
         buttonContainer.style.display = 'flex';
         buttonContainer.style.justifyContent = 'space-between';
-        buttonContainer.style.gap = '10px';
+        buttonContainer.id = 'buttonContainer'
 
         // Botão para excluir
-        let button = document.createElement('button');
+        let button = document.createElement('button')
         button.className = 'btn_card';
         button.textContent = 'EXCLUIR';
         button.style.display = 'flex';
         button.style.alignItems = 'center';
-        button.addEventListener('click', () => {
-            excluirCartoes(i);
+        button.addEventListener('click', ()=>{
+            mostraTelaDel(i);
         });
 
         // Botão para atualizar
         let buttonAtt = document.createElement('button');
-        buttonAtt.className = 'btn_att_card';  
+        buttonAtt.className = 'btn_card';  
         buttonAtt.textContent = 'ATUALIZAR';
         buttonAtt.addEventListener('click', () => {
             mostraTelaAtt(i); // Passando o índice para a tela de atualização
@@ -44,8 +54,11 @@ export async function criarCartoes() {
         buttonContainer.appendChild(button);
         buttonContainer.appendChild(buttonAtt);
 
+        infos.appendChild(h3)
+        infos.appendChild(p)
+
         // Adiciona elementos ao cartão
-        card.appendChild(h3);
+        card.appendChild(infos);
         card.appendChild(buttonContainer);
 
         // Adiciona o cartão à seção

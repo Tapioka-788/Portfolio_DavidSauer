@@ -55,14 +55,23 @@
     </section>
 
     <section id="telaAtt">
-        <div id="inputs-att">
+        <div id="inputs_att">
             <input id="nomesAtt" type="text" placeholder="Nome" required>
             <input id="descricaoAtt" type="text" placeholder="Descrição" required>
-            <div id="buttons-tela-att">
+            <div id="buttons_telaatt">
                 <button onclick="recolheDadosAtt()">SALVAR</button>
                 <button onclick="escondeTelaAtt()">CANCELAR</button>
             </div>
         </div>
     </section>
-    
+    <section id="confirm_delete">
+        <div class="smallScreen">
+            <h1>Tem certeza que deseja excluir o cartão?</h1>
+            <div class="btns_confirm">
+                <button class="btn_confirm" id="btn_sim" onclick="recolheDadosDel()">SIM</button>
+                <button class="btn_confirm" id="btn_nao" onclick="escodeTelaDel()">NÃO</button>
+            </div>
+        </div>
+    </section>
+
 </body>
